@@ -117,7 +117,7 @@ export default function Home() {
         {/* Configuration Section */}
         <section className={`transition-opacity ${file ? 'opacity-100' : 'opacity-50 pointer-events-none'}`}>
           <h2 className="text-xl font-semibold mb-3">2. Layout Options</h2>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 mb-4">
             <button
               onClick={() => setLayout('4-up')}
               className={`flex-1 flex flex-col items-center gap-3 p-4 rounded-xl border-2 transition-all
@@ -140,6 +140,20 @@ export default function Home() {
                 <p className="text-sm text-gray-500">Side-by-side on A4 Landscape</p>
               </div>
             </button>
+          </div>
+
+          <h3 className="text-md font-semibold mb-2">Vertical Layouts (A4 Portrait)</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {(['1-vertical', '2-vertical', '3-vertical', '4-vertical', '3.5-vertical'] as LayoutMode[]).map((mode) => (
+              <button
+                key={mode}
+                onClick={() => setLayout(mode)}
+                className={`py-2 px-3 rounded-lg border text-sm font-medium transition-all
+                  ${layout === mode ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 hover:border-gray-300 text-gray-700'}`}
+              >
+                {mode === '3.5-vertical' ? '3.5 Pages Continuous' : `${mode.split('-')[0]} Page(s) Vertical`}
+              </button>
+            ))}
           </div>
 
           <div className="mt-4 flex items-center gap-2">
