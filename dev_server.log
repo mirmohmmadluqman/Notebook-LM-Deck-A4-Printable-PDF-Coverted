@@ -1,0 +1,20 @@
+
+> temp-next-app@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.10 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 526ms
+
+○ Compiling / ...
+ GET / 200 in 6.6s (next.js: 6.0s, application-code: 529ms)
+ GET / 200 in 73ms (next.js: 6ms, application-code: 67ms)
+[browser] Trying to parse invalid object: {"line":0,"column":36,"offset":10})
+[browser] Invalid object ref: 1 0 R
+[browser] Trying to parse invalid object: {"line":0,"column":159,"offset":65})
+[browser] Invalid object ref: 2 0 R
+[browser] Trying to parse invalid object: {"line":0,"column":300,"offset":129})
+[browser] Invalid object ref: 3 0 R
+[browser] Error: Failed to parse PDF document (line:0 col:1505 offset=309): Expected next byte to be 60 but it was actually 92 (src/app/page.tsx:62:15)
+ GET / 200 in 65ms (next.js: 5ms, application-code: 60ms)
