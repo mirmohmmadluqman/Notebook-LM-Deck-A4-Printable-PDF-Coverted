@@ -19,10 +19,10 @@ const toolCategories = [
   {
     title: "File Manipulation & Organization",
     tools: [
-      { name: "Merge PDF", description: "Combine multiple files into a single document.", icon: FileStack, active: false, href: "/merge-pdf" },
-      { name: "Split PDF", description: "Extract specific pages or split a large document.", icon: Scissors, active: false, href: "/split-pdf" },
-      { name: "Organize Pages", description: "Reorder, delete, or add new pages.", icon: FileUp, active: false, href: "/organize-pages" },
-      { name: "Rotate & Crop", description: "Adjust page orientation and trim margins.", icon: Crop, active: false, href: "/rotate-crop" },
+      { name: "Merge PDF", description: "Combine multiple files into a single document.", icon: FileStack, active: true, href: "/merge-pdf" },
+      { name: "Split PDF", description: "Extract specific pages or split a large document.", icon: Scissors, active: true, href: "/split-pdf" },
+      { name: "Organize Pages", description: "Reorder, delete, or add new pages.", icon: FileUp, active: true, href: "/organize-pages" },
+      { name: "Rotate & Crop", description: "Adjust page orientation and trim margins.", icon: Crop, active: true, href: "/rotate-crop" },
     ]
   },
   {
@@ -88,24 +88,47 @@ export default function IndexPage() {
           <section key={idx} className="flex flex-col gap-4">
             <h2 className="text-2xl font-bold text-gray-800">{category.title}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {category.tools.map((tool, toolIdx) => (
-                <Link
-                  href={tool.href}
-                  key={toolIdx}
-                  className="relative flex flex-col gap-4 p-6 rounded-2xl border border-gray-200 bg-white opacity-80 hover:opacity-100 hover:border-gray-300 hover:shadow-sm transition-all"
-                >
-                  <div className="absolute top-4 right-4 bg-gray-200 text-gray-600 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">
-                    Coming Soon
-                  </div>
-                  <div className="p-3 bg-gray-100 text-gray-500 rounded-xl w-fit">
-                    <tool.icon className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-1">{tool.name}</h3>
-                    <p className="text-sm text-gray-500">{tool.description}</p>
-                  </div>
-                </Link>
-              ))}
+              {category.tools.map((tool, toolIdx) => {
+                if (tool.active) {
+                  return (
+                    <Link
+                      href={tool.href}
+                      key={toolIdx}
+                      className="group relative flex flex-col gap-4 p-6 rounded-2xl border-2 border-blue-500 bg-blue-50 hover:bg-blue-100 hover:border-blue-600 transition-all shadow-sm hover:shadow-md"
+                    >
+                      <div className="absolute top-4 right-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">
+                        Available
+                      </div>
+                      <div className="p-3 bg-blue-600 text-white rounded-xl w-fit group-hover:scale-110 transition-transform">
+                        <tool.icon className="w-8 h-8" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">{tool.name}</h3>
+                        <p className="text-gray-600">{tool.description}</p>
+                      </div>
+                    </Link>
+                  );
+                }
+
+                return (
+                  <Link
+                    href={tool.href}
+                    key={toolIdx}
+                    className="relative flex flex-col gap-4 p-6 rounded-2xl border border-gray-200 bg-white opacity-80 hover:opacity-100 hover:border-gray-300 hover:shadow-sm transition-all"
+                  >
+                    <div className="absolute top-4 right-4 bg-gray-200 text-gray-600 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">
+                      Coming Soon
+                    </div>
+                    <div className="p-3 bg-gray-100 text-gray-500 rounded-xl w-fit">
+                      <tool.icon className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-1">{tool.name}</h3>
+                      <p className="text-sm text-gray-500">{tool.description}</p>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </section>
         ))}
