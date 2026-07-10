@@ -19,34 +19,34 @@ const toolCategories = [
   {
     title: "File Manipulation & Organization",
     tools: [
-      { name: "Merge PDF", description: "Combine multiple files into a single document.", icon: FileStack, active: false },
-      { name: "Split PDF", description: "Extract specific pages or split a large document.", icon: Scissors, active: false },
-      { name: "Organize Pages", description: "Reorder, delete, or add new pages.", icon: FileUp, active: false },
-      { name: "Rotate & Crop", description: "Adjust page orientation and trim margins.", icon: Crop, active: false },
+      { name: "Merge PDF", description: "Combine multiple files into a single document.", icon: FileStack, active: false, href: "/merge-pdf" },
+      { name: "Split PDF", description: "Extract specific pages or split a large document.", icon: Scissors, active: false, href: "/split-pdf" },
+      { name: "Organize Pages", description: "Reorder, delete, or add new pages.", icon: FileUp, active: false, href: "/organize-pages" },
+      { name: "Rotate & Crop", description: "Adjust page orientation and trim margins.", icon: Crop, active: false, href: "/rotate-crop" },
     ]
   },
   {
     title: "Conversion Utilities",
     tools: [
-      { name: "PDF to Office", description: "Convert PDFs to editable formats like Word, Excel, or PowerPoint.", icon: FileText, active: false },
-      { name: "Office to PDF", description: "Convert Word, Excel, and PowerPoint back into PDFs.", icon: FileText, active: false },
-      { name: "Image Converters", description: "Extract images from PDFs or convert image formats.", icon: ImageIcon, active: false },
+      { name: "PDF to Office", description: "Convert PDFs to editable formats like Word, Excel, or PowerPoint.", icon: FileText, active: false, href: "/pdf-to-office" },
+      { name: "Office to PDF", description: "Convert Word, Excel, and PowerPoint back into PDFs.", icon: FileText, active: false, href: "/office-to-pdf" },
+      { name: "Image Converters", description: "Extract images from PDFs or convert image formats.", icon: ImageIcon, active: false, href: "/image-converters" },
     ]
   },
   {
     title: "Optimization & Security",
     tools: [
-      { name: "Compress PDF", description: "Reduce file sizes for easier sharing.", icon: Minimize, active: false },
-      { name: "Protect PDF", description: "Add password encryption and restrict editing.", icon: Lock, active: false },
-      { name: "Unlock PDF", description: "Remove security protections with the password.", icon: Unlock, active: false },
+      { name: "Compress PDF", description: "Reduce file sizes for easier sharing.", icon: Minimize, active: false, href: "/compress-pdf" },
+      { name: "Protect PDF", description: "Add password encryption and restrict editing.", icon: Lock, active: false, href: "/protect-pdf" },
+      { name: "Unlock PDF", description: "Remove security protections with the password.", icon: Unlock, active: false, href: "/unlock-pdf" },
     ]
   },
   {
     title: "Annotation & Editing",
     tools: [
-      { name: "PDF Editor", description: "Add text boxes, highlights, sticky notes, and drawings.", icon: PenTool, active: false },
-      { name: "Sign PDF", description: "Draw, type, or upload your e-signature.", icon: Signature, active: false },
-      { name: "Watermark", description: "Add customizable text or image watermarks.", icon: Stamp, active: false },
+      { name: "PDF Editor", description: "Add text boxes, highlights, sticky notes, and drawings.", icon: PenTool, active: false, href: "/pdf-editor" },
+      { name: "Sign PDF", description: "Draw, type, or upload your e-signature.", icon: Signature, active: false, href: "/sign-pdf" },
+      { name: "Watermark", description: "Add customizable text or image watermarks.", icon: Stamp, active: false, href: "/watermark" },
     ]
   }
 ];
@@ -89,9 +89,10 @@ export default function IndexPage() {
             <h2 className="text-2xl font-bold text-gray-800">{category.title}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {category.tools.map((tool, toolIdx) => (
-                <div
+                <Link
+                  href={tool.href}
                   key={toolIdx}
-                  className="relative flex flex-col gap-4 p-6 rounded-2xl border border-gray-200 bg-white opacity-60 hover:opacity-100 transition-opacity"
+                  className="relative flex flex-col gap-4 p-6 rounded-2xl border border-gray-200 bg-white opacity-80 hover:opacity-100 hover:border-gray-300 hover:shadow-sm transition-all"
                 >
                   <div className="absolute top-4 right-4 bg-gray-200 text-gray-600 text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wide">
                     Coming Soon
@@ -103,7 +104,7 @@ export default function IndexPage() {
                     <h3 className="text-lg font-bold text-gray-900 mb-1">{tool.name}</h3>
                     <p className="text-sm text-gray-500">{tool.description}</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
