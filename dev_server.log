@@ -5,9 +5,11 @@
 ▲ Next.js 16.2.10 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.2:3000
-✓ Ready in 519ms
+✓ Ready in 546ms
 
 ○ Compiling / ...
- GET / 200 in 5.7s (next.js: 5.2s, application-code: 505ms)
- GET / 200 in 126ms (next.js: 6ms, application-code: 120ms)
- GET /notebook-layout-editor 200 in 2.3s (next.js: 2.2s, application-code: 76ms)
+ GET / 200 in 5.1s (next.js: 4.5s, application-code: 569ms)
+ GET / 200 in 170ms (next.js: 6ms, application-code: 164ms)
+ GET /merge-pdf 200 in 48ms (next.js: 6ms, application-code: 42ms)
+ GET / 200 in 168ms (next.js: 5ms, application-code: 163ms)
+ GET /merge-pdf 200 in 37ms (next.js: 4ms, application-code: 33ms)
