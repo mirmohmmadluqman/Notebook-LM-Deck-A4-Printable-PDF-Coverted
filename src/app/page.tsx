@@ -28,25 +28,25 @@ const toolCategories = [
   {
     title: "Conversion Utilities",
     tools: [
-      { name: "PDF to Office", description: "Convert PDFs to editable formats like Word, Excel, or PowerPoint.", icon: FileText, active: false, href: "/pdf-to-office" },
-      { name: "Office to PDF", description: "Convert Word, Excel, and PowerPoint back into PDFs.", icon: FileText, active: false, href: "/office-to-pdf" },
-      { name: "Image Converters", description: "Extract images from PDFs or convert image formats.", icon: ImageIcon, active: false, href: "/image-converters" },
+      { name: "PDF to Office", description: "Convert PDFs to editable formats like Word, Excel, or PowerPoint.", icon: FileText, active: true, href: "/pdf-to-office" },
+      { name: "Office to PDF", description: "Convert Word, Excel, and PowerPoint back into PDFs.", icon: FileText, active: true, href: "/office-to-pdf" },
+      { name: "Image Converters", description: "Extract images from PDFs or convert image formats.", icon: ImageIcon, active: true, href: "/image-converters" },
     ]
   },
   {
     title: "Optimization & Security",
     tools: [
-      { name: "Compress PDF", description: "Reduce file sizes for easier sharing.", icon: Minimize, active: false, href: "/compress-pdf" },
-      { name: "Protect PDF", description: "Add password encryption and restrict editing.", icon: Lock, active: false, href: "/protect-pdf" },
-      { name: "Unlock PDF", description: "Remove security protections with the password.", icon: Unlock, active: false, href: "/unlock-pdf" },
+      { name: "Compress PDF", description: "Reduce file sizes for easier sharing.", icon: Minimize, active: true, href: "/compress-pdf" },
+      { name: "Protect PDF", description: "Add password encryption and restrict editing.", icon: Lock, active: true, href: "/protect-pdf" },
+      { name: "Unlock PDF", description: "Remove security protections with the password.", icon: Unlock, active: true, href: "/unlock-pdf" },
     ]
   },
   {
     title: "Annotation & Editing",
     tools: [
-      { name: "PDF Editor", description: "Add text boxes, highlights, sticky notes, and drawings.", icon: PenTool, active: false, href: "/pdf-editor" },
-      { name: "Sign PDF", description: "Draw, type, or upload your e-signature.", icon: Signature, active: false, href: "/sign-pdf" },
-      { name: "Watermark", description: "Add customizable text or image watermarks.", icon: Stamp, active: false, href: "/watermark" },
+      { name: "PDF Editor", description: "Add text boxes, highlights, sticky notes, and drawings.", icon: PenTool, active: true, href: "/pdf-editor" },
+      { name: "Sign PDF", description: "Draw, type, or upload your e-signature.", icon: Signature, active: true, href: "/sign-pdf" },
+      { name: "Watermark", description: "Add customizable text or image watermarks.", icon: Stamp, active: true, href: "/watermark" },
     ]
   }
 ];

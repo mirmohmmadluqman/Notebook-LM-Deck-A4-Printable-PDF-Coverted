@@ -5,11 +5,15 @@
 ▲ Next.js 16.2.10 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.2:3000
-✓ Ready in 546ms
+✓ Ready in 524ms
 
 ○ Compiling / ...
- GET / 200 in 5.1s (next.js: 4.5s, application-code: 569ms)
- GET / 200 in 170ms (next.js: 6ms, application-code: 164ms)
- GET /merge-pdf 200 in 48ms (next.js: 6ms, application-code: 42ms)
- GET / 200 in 168ms (next.js: 5ms, application-code: 163ms)
- GET /merge-pdf 200 in 37ms (next.js: 4ms, application-code: 33ms)
+ GET / 200 in 4.7s (next.js: 4.3s, application-code: 423ms)
+ GET / 200 in 272ms (next.js: 7ms, application-code: 265ms)
+ GET /sign-pdf 200 in 1071ms (next.js: 975ms, application-code: 95ms)
+ GET / 200 in 232ms (next.js: 11ms, application-code: 222ms)
+ GET /pdf-editor 200 in 980ms (next.js: 897ms, application-code: 83ms)
+ GET / 200 in 134ms (next.js: 5ms, application-code: 129ms)
+ GET /image-converters 200 in 190ms (next.js: 4ms, application-code: 186ms)
+ GET /sign-pdf 200 in 114ms (next.js: 6ms, application-code: 108ms)
+ GET /pdf-editor 200 in 77ms (next.js: 4ms, application-code: 73ms)
