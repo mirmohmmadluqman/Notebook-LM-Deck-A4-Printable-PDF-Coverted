@@ -19,34 +19,41 @@ const toolCategories = [
   {
     title: "File Manipulation & Organization",
     tools: [
-      { name: "Merge PDF", description: "Combine multiple files into a single document.", icon: FileStack, active: true, href: "/merge-pdf" },
-      { name: "Split PDF", description: "Extract specific pages or split a large document.", icon: Scissors, active: true, href: "/split-pdf" },
-      { name: "Organize Pages", description: "Reorder, delete, or add new pages.", icon: FileUp, active: true, href: "/organize-pages" },
-      { name: "Rotate & Crop", description: "Adjust page orientation and trim margins.", icon: Crop, active: true, href: "/rotate-crop" },
+      { name: "Merge PDF", description: "Combine multiple files into a single document.", icon: FileStack, active: false, href: "/merge-pdf" },
+      { name: "Split PDF", description: "Extract specific pages or split a large document.", icon: Scissors, active: false, href: "/split-pdf" },
+      { name: "Organize Pages", description: "Reorder, delete, or add new pages.", icon: FileUp, active: false, href: "/organize-pages" },
+      { name: "Rotate & Crop", description: "Adjust page orientation and trim margins.", icon: Crop, active: false, href: "/rotate-crop" },
     ]
   },
   {
     title: "Conversion Utilities",
     tools: [
-      { name: "PDF to Office", description: "Convert PDFs to editable formats like Word, Excel, or PowerPoint.", icon: FileText, active: true, href: "/pdf-to-office" },
-      { name: "Office to PDF", description: "Convert Word, Excel, and PowerPoint back into PDFs.", icon: FileText, active: true, href: "/office-to-pdf" },
-      { name: "Image Converters", description: "Extract images from PDFs or convert image formats.", icon: ImageIcon, active: true, href: "/image-converters" },
+      { name: "PDF to Office", description: "Convert PDFs to editable formats like Word, Excel, or PowerPoint.", icon: FileText, active: false, href: "/pdf-to-office" },
+      { name: "Office to PDF", description: "Convert Word, Excel, and PowerPoint back into PDFs.", icon: FileText, active: false, href: "/office-to-pdf" },
+      { name: "Image Converters", description: "Extract images from PDFs or convert image formats.", icon: ImageIcon, active: false, href: "/image-converters" },
+    ]
+  },
+  {
+    title: "PDF to Text",
+    tools: [
+      { name: "PDF to Text", description: "Extract text from PDFs or perform OCR.", icon: FileText, active: true, href: "/pdf-to-text" },
+      { name: "Text to PDF", description: "Create a PDF document from raw text.", icon: FileText, active: true, href: "/text-to-pdf" },
     ]
   },
   {
     title: "Optimization & Security",
     tools: [
-      { name: "Compress PDF", description: "Reduce file sizes for easier sharing.", icon: Minimize, active: true, href: "/compress-pdf" },
-      { name: "Protect PDF", description: "Add password encryption and restrict editing.", icon: Lock, active: true, href: "/protect-pdf" },
-      { name: "Unlock PDF", description: "Remove security protections with the password.", icon: Unlock, active: true, href: "/unlock-pdf" },
+      { name: "Compress PDF", description: "Reduce file sizes for easier sharing.", icon: Minimize, active: false, href: "/compress-pdf" },
+      { name: "Protect PDF", description: "Add password encryption and restrict editing.", icon: Lock, active: false, href: "/protect-pdf" },
+      { name: "Unlock PDF", description: "Remove security protections with the password.", icon: Unlock, active: false, href: "/unlock-pdf" },
     ]
   },
   {
     title: "Annotation & Editing",
     tools: [
-      { name: "PDF Editor", description: "Add text boxes, highlights, sticky notes, and drawings.", icon: PenTool, active: true, href: "/pdf-editor" },
-      { name: "Sign PDF", description: "Draw, type, or upload your e-signature.", icon: Signature, active: true, href: "/sign-pdf" },
-      { name: "Watermark", description: "Add customizable text or image watermarks.", icon: Stamp, active: true, href: "/watermark" },
+      { name: "PDF Editor", description: "Add text boxes, highlights, sticky notes, and drawings.", icon: PenTool, active: false, href: "/pdf-editor" },
+      { name: "Sign PDF", description: "Draw, type, or upload your e-signature.", icon: Signature, active: false, href: "/sign-pdf" },
+      { name: "Watermark", description: "Add customizable text or image watermarks.", icon: Stamp, active: false, href: "/watermark" },
     ]
   }
 ];
