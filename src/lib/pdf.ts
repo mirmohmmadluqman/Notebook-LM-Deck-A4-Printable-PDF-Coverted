@@ -109,8 +109,8 @@ export async function processPdf({ file, layout, drawBorders = true }: ProcessPd
     }
   } else {
     // Vertical Layouts
-    let pagesPerSheetStr = layout.split('-')[0];
-    let rowsPerPage = parseFloat(pagesPerSheetStr);
+    const pagesPerSheetStr = layout.split('-')[0];
+    const rowsPerPage = parseFloat(pagesPerSheetStr);
 
     // Total vertical space we can print on (without spacing yet, because continuous means no fixed spacing for 3.5, but we requested vertical layout).
     // The user requested stacked vertical: Page 1 on top, page 2 below it, etc.

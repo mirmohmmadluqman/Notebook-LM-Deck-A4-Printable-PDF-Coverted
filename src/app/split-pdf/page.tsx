@@ -86,8 +86,9 @@ export default function SplitPdfPage() {
       let pagesToExtract: number[];
       try {
         pagesToExtract = parsePageRanges(pageRanges, maxPages);
-      } catch (e: any) {
-        setError(`Invalid page range: ${e.message}`);
+      } catch (e) {
+        const error = e as Error;
+        setError(`Invalid page range: ${error.message}`);
         setIsProcessing(false);
         return;
       }
